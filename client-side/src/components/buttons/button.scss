@@ -1,0 +1,19 @@
+@import "../../styles/_color.scss";
+@import "../../styles/variables.scss";
+
+.login-btn{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: $font-color-primary;
+    color: $background-primary;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    &:hover {
+        box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.5);
+        background-color: $font-color-primary;
+        opacity: .9;
+        // font-weight: bolder;
+      }
+}

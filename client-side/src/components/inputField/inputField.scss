@@ -1,0 +1,42 @@
+@import "../../styles/color";
+@import "../../styles/variables.scss";
+
+.form-elements {
+  width: 100%;
+  height: 2.1rem;
+  grid-column: span 1;
+  row-gap: 1rem;
+  padding: 0.5rem 0;
+
+  label {
+    font-size: $font-size-master;
+    font-weight: bold;
+  }
+  
+  .input-container {
+    display: grid;
+    height: 2.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #f6f8f9;
+    border-bottom: 0.15rem solid gray;
+    align-items: center;
+    margin: 1.1rem 0 2rem;
+    padding-left: 0.1rem;
+
+    input {
+      width: 100%;
+      color: $font-color-primary;
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      font-size: $font-size-master;
+      font-weight: 500;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.24);
+      background-color: whitesmoke;
+    }
+  }
+}

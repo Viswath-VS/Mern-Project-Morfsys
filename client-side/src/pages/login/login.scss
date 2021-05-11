@@ -1,0 +1,62 @@
+@import "../../styles/_color.scss";
+@import "../../styles/variables.scss";
+.login-wrapper {
+  position: relative;
+  margin-left: 5.3rem;
+
+  .login-nav-container {
+    display: grid;
+    height: 5rem;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 3.6rem;
+    img {
+      height: 3.6rem;
+      width: 16.2rem;
+    }
+  }
+  .login-box-container {
+    display: grid;
+    grid: 6.5rem 6rem 6rem 6rem 4rem/ 1fr;
+    height: 30.3rem;
+    width: 25rem;
+    color: $font-color-primary;
+    text-align: left;
+    h2 {
+      font-size: $font-size-large;
+      margin-bottom: 1.1rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: $font-size-master;
+      color: $font-color-secondary;
+    }
+    .button-container{
+        height: 2.75rem;
+        width: 15.5rem;
+        font-size: 16px;
+        margin-top: 2.5rem;
+    }
+  }
+  .login-illustration {
+    height: 26.6rem;
+    width: 31.8rem;
+    position: absolute;
+    top: 22.1%;
+    left: 50.1%;
+  }
+  .primary {
+    position: absolute;
+    height: 15.8rem;
+    width: 15.2rem;
+    top: 85%;
+    left: 85%;
+  }
+  .secondary {
+    position: absolute;
+    height: 5rem;
+    width: 6rem;
+    top: 95%;
+    left: 46.6%;
+  }
+}
