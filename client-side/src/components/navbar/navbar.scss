@@ -1,0 +1,32 @@
+@import "../../styles/color";
+@import "../../styles/variables";
+
+.home-navbar-container{
+    grid-row: span 1;
+    display: grid;
+    grid: 1fr 2fr / 1fr;
+    // height: 5rem;
+    background-color: $background-primary;
+    
+    h1{
+        margin-left:5rem;
+        font-size: 25px;
+        
+    }
+
+    .navbar-section{
+        grid-row: span 1;
+        display: grid;
+        grid: 1fr /1fr 1fr 1fr;
+        width: 40rem;
+        align-items: center;
+        // justify-items: center;
+        margin-left: 5rem;
+
+        h3{
+            grid-column: span 1;
+            font-size: $font-size-master;
+            
+        }
+    }
+}

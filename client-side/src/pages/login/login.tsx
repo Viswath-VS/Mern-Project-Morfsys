@@ -3,6 +3,7 @@ import InputField from "../../components/inputField/inputField";
 import Button from "../../components/buttons/button";
 import { inputFieldRows } from "../../types/dataModels";
 import "./login.scss";
+
 interface Props {}
 
 const Login = ({}: Props): ReactElement => {
@@ -16,18 +17,19 @@ const Login = ({}: Props): ReactElement => {
           <h2>Welcome to Globiliti!</h2>
           <p>Create your school account</p>
         </div>
-        {inputFieldRows.map(({ label, name, placeholder, type }) => {
+        {inputFieldRows.map(({ label, name, placeholder, type },key) => {
           return (
             <InputField
               label={label}
               name={name}
               placeholder={placeholder}
               type={type}
+              key={key}
             />
           );
         })}
         <div className="button-container">
-          <Button name="CREATE ACCOUNT" className="login-btn" />
+          <Button name="CREATE ACCOUNT" className="login-btn" path="/" />
         </div>
       </div>
       <div className="login-illustration">

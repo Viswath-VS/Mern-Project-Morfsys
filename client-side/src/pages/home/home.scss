@@ -1,0 +1,14 @@
+.home-wrapper{
+    display: grid;
+    grid: 1fr/1fr 4.5fr;
+    height: 100 vh;
+   
+   
+    .home-body-wrapper{
+        background-color: palegreen;
+        grid-column: span 1;
+        height: 100%;
+        display: grid;
+        grid: 5rem 60rem / 1fr;
+    }
+}

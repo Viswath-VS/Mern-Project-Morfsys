@@ -6,10 +6,10 @@ const App = (): ReactElement => {
   return (
     <div className="app-wrapper">
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/login">
           <Login />
         </Route>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>
