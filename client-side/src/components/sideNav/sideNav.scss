@@ -7,7 +7,7 @@
   display: grid;
   grid: 6rem 12rem 45rem 7rem/ 1fr;
   height: 100%;
-  // width: 16rem;
+  max-width: 20rem;
 
   .side-nav-logo {
     grid-row: span 1;
@@ -70,14 +70,15 @@
     align-items: center;
 
     img {
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
     }
 
     .side-nav-middle-title {
       grid-row: span 1;
       display: grid;
       grid: 1fr / 3fr 1fr;
+      align-items: center;
 
       h3 {
         margin-left: 1rem;
@@ -87,7 +88,7 @@
       }
 
       svg {
-        margin-left: 1.75rem;
+        margin-left: 1rem;
         color: $icon-primary;
       }
 
@@ -109,11 +110,15 @@
         grid-column: span 1;
         display: grid;
         grid: 1fr 1fr / 1fe;
+        align-items: center;
 
         h3 {
           font-size: $font-size-master;
           color: $font-color-tertiary;
           font-weight: 200;
+        }
+        p{
+          font-size: $font-size-primary;
         }
 
       }

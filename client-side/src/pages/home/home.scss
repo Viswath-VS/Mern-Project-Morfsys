@@ -1,14 +1,90 @@
-.home-wrapper{
+@import "../../styles/variables.scss";
+@import "../../styles/color";
+.home-wrapper {
+  display: grid;
+  grid: 1fr/1fr 5fr;
+  height: 100 vh;
+
+  .home-body-wrapper {
+    background-color: #ececec;
+    grid-column: span 1;
+    height: 100%;
     display: grid;
-    grid: 1fr/1fr 4.5fr;
-    height: 100 vh;
-   
-   
-    .home-body-wrapper{
-        background-color: palegreen;
+    grid: 5rem 60rem / 1fr;
+
+    .body-content-wrapper {
+      grid-row: span 1;
+      display: grid;
+      height: 100%;
+      grid: 1fr/ 1fr 1fr 1fr 1fr;
+      //   overflow-x: auto;
+      //   white-space: nowrap;
+
+      .body-column {
         grid-column: span 1;
-        height: 100%;
-        display: grid;
-        grid: 5rem 60rem / 1fr;
+        max-width: 270px;
+        margin: 3rem 1rem;
+        // display: grid;
+        // height: 35rem;
+
+        .body-section-title {
+          display: grid;
+          grid: 1fr / 3fr 1fr;
+          align-items: center;
+          margin-bottom: 1rem;
+          color: $font-color-primary;
+          font-size: $font-size-master;
+
+          .body-section-title-icon {
+            display: grid;
+            grid: 1fr/1fr 1fr;
+            color: $font-color-secondary;
+          }
+        }
+        .body-column-space {
+          display: grid;
+          grid: 1fr 10fr / 1fr;
+          height: 100%;
+          background-color: $foreground-secondary;
+          text-align: center;
+
+          h3 {
+            font-size: $font-size-master;
+            color: $font-color-secondary;
+            margin-top: 1rem;
+          }
+        }
+        .card-item-learn {
+          display: grid;
+          grid: 1fr / 1fr 5fr;
+          //   height: 200px;
+          padding: 1rem;
+          border-radius: 5px;
+          background-color: $background-primary;
+          align-items: center;
+          margin-bottom: 1rem;
+          img{
+              width: 35px;
+              height: 35px;
+          }
+          .card-item-learn-details {
+            margin-left: 1rem;
+            grid: 1fr 3fr/1fr;
+            // width: 60%;
+            align-items: center;
+            color: #818181;
+            cursor: pointer;
+            h3{
+                font-size: $font-size-master;
+                color: $font-color-secondary;  
+            }
+            p{
+                font-size: $font-size-primary;
+                color: $font-color-tertiary;
+            }
+          }
+        }
+      }
     }
+  }
 }
