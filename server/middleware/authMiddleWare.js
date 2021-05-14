@@ -4,7 +4,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 const jwtKey = process.env.JWT_KEY;
 const authMiddleware = (req,res,next) => {
-    const token = req.header('x-auth-token');
+    // console.log("request is made",req);
+    const token = req.header('authorization');
+    console.log(token);
     if(!token) return res.status(404).send('json web token not found. try again');
 
     try {

@@ -1,12 +1,30 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import InputField from "../../components/inputField/inputField";
-import Button from "../../components/buttons/button";
-import { inputFieldRows } from "../../types/dataModels";
+import { Link, useHistory } from "react-router-dom";
 import "./login.scss";
+import axios from "axios";
 
-interface Props {}
+interface Props {
+  auth: any
+}
 
-const Login = ({}: Props): ReactElement => {
+const Login = ({auth}: Props): ReactElement => {
+  let history = useHistory();
+  const Login = async (details:object) =>{
+    try {
+      const userData = details;
+      const res = await axios.post("http://localhost:5000/api/register",userData);
+      console.log(res);
+      localStorage.setItem("auth-token", res.data);
+      auth();
+      history.push("/");
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+    
+  }
   return (
     <div className="login-wrapper">
       <div className="login-nav-container">
@@ -17,20 +35,7 @@ const Login = ({}: Props): ReactElement => {
           <h2>Welcome to Globiliti!</h2>
           <p>Create your school account</p>
         </div>
-        {inputFieldRows.map(({ label, name, placeholder, type },key) => {
-          return (
-            <InputField
-              label={label}
-              name={name}
-              placeholder={placeholder}
-              type={type}
-              key={key}
-            />
-          );
-        })}
-        <div className="button-container">
-          <Button name="CREATE ACCOUNT" className="login-btn" path="/" />
-        </div>
+        <InputField Login={Login} />
       </div>
       <div className="login-illustration">
         <img src="../../../public/loginIllustration.svg" alt="illustration" />

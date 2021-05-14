@@ -20,7 +20,7 @@ export default class UsersDAO {
       await user.save();
 
       const token = user.getToken();
-      res.header("x-auth-token", token).send(user);
+      res.send(token);
     } catch (error) {
       res.send(error.details[0].message);
     }
@@ -43,7 +43,7 @@ export default class UsersDAO {
 
       const token = user.getToken();
 
-      res.header("x-auth-token", token).send(user);
+      res.send(token);
     } catch (error) {
       res.send(error.details[0].message);
     }
@@ -51,6 +51,7 @@ export default class UsersDAO {
 
   //   function to check authorization of user;
   static async authUser(req, res) {
+    console.log("user is verified");
     res.status(200).send("is authorized");
   }
 }
