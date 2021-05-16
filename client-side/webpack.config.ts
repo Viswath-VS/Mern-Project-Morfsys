@@ -1,17 +1,26 @@
 import path from "path";
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import {Configuration} from "webpack";
+// import {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import { Configuration as WebpackConfiguration } from "webpack";
+import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
 
 const webpackConfig = ():Configuration => {
   return {
     mode: "development",
-    entry: "./src/index.tsx",
+    entry: "./src",
     devtool: "eval",
     output: {
-      filename: "bundle.js",
-      path: path.resolve(__dirname, "dist"),
+      path: path.join(__dirname, '/dist'),
+      filename: 'index.js',
+    },
+    devServer:{
+      historyApiFallback: true,
     },
     module: {
       rules: [

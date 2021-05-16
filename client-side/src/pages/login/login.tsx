@@ -1,6 +1,10 @@
 import React, { ReactElement, useState } from "react";
 import InputField from "../../components/inputField/inputField";
 import { Link, useHistory } from "react-router-dom";
+import Logo from "../../images/logo.svg";
+import LoginIllustration from "../../images/loginIllustration.svg";
+import LoginPrimary from "../../images/loginPrimary.svg";
+import LoginSecondary from "../../images/loginSecondary.svg";
 import "./login.scss";
 import axios from "axios";
 
@@ -28,7 +32,7 @@ const Login = ({auth}: Props): ReactElement => {
   return (
     <div className="login-wrapper">
       <div className="login-nav-container">
-        <img src="../../../public/logo.svg" alt="Globiliti" />
+        <img src={Logo} alt="Globiliti" />
       </div>
       <div className="login-box-container">
         <div>
@@ -38,11 +42,11 @@ const Login = ({auth}: Props): ReactElement => {
         <InputField Login={Login} />
       </div>
       <div className="login-illustration">
-        <img src="../../../public/loginIllustration.svg" alt="illustration" />
+        <img src={LoginIllustration} alt="illustration" />
       </div>
-      <img src="../../../public/loginPrimary.svg" alt="" className="primary" />
+      <img src={LoginPrimary} alt="" className="primary" />
       <img
-        src="../../../public/loginSecondary.svg"
+        src={LoginSecondary}
         alt=""
         className="secondary"
       />

@@ -9,7 +9,7 @@
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
         "allowJs": true,
-        "esModuleInterop": true,
+        "esModuleInterop": true,  
         "resolveJsonModule": true,
         "moduleResolution": "node",
         "downlevelIteration": true,

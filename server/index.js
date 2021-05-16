@@ -8,11 +8,11 @@ const port = process.env.PORT || 5000;
 const url = process.env.DATABASE_LINK;
 
 // connecting to database .
-mongoose
-  .connect(url, {
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
+    useCreateIndex:true
   })
   .then(
     app.listen(port, () =>

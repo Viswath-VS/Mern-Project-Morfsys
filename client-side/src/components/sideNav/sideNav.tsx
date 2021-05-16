@@ -6,6 +6,7 @@ import {
   sideNavTopItems,
 } from "../../types/dataModels";
 import MenuIcon from "@material-ui/icons/Menu";
+import Logo from "../../images/logo.svg";
 import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
 import { useHistory } from "react-router-dom";
 
@@ -19,7 +20,7 @@ const SideNav = () => {
   return (
     <div className="side-nav-wrapper">
       <div className="side-nav-logo">
-        <img src="../../../public/logo.svg" alt="Globiliti" />
+        <img src={Logo} alt="Globiliti" />
         <MenuIcon className="menu" />
       </div>
       <div className="side-nav-top">

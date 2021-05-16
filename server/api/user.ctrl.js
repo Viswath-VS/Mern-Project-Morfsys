@@ -3,11 +3,12 @@ import bcrypt from "bcrypt";
 import { validateUser, validateAuth } from "../middleware/validation.js";
 
 export default class UsersDAO {
-  // function to add new user to database
+  //   function to add new user to database
   static async addUser(req, res) {
     try {
-      const { error } = await validateUser(req.body);
+      let { error } = await validateUser(req.body);
       if (error) return res.status(400).send(error.details[0].message);
+
       let user = await User.findOne({ email: req.body.email });
       if (user) return res.status(400).send("User already registered.");
       user = new User({
@@ -22,7 +23,7 @@ export default class UsersDAO {
       const token = user.getToken();
       res.send(token);
     } catch (error) {
-      res.send(error.details[0].message);
+      res.send(error.message);
     }
   }
 
@@ -40,12 +41,11 @@ export default class UsersDAO {
       );
 
       if (!validPassword) return res.status(400).send("Invalid Password.");
-
       const token = user.getToken();
-
       res.send(token);
+      
     } catch (error) {
-      res.send(error.details[0].message);
+      res.send(error.message);
     }
   }
 

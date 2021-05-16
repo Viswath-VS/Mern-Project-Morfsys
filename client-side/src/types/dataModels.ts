@@ -9,6 +9,12 @@ import BuildRoundedIcon from '@material-ui/icons/BuildRounded';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import DoneRoundedIcon from '@material-ui/icons/DoneRounded';
 import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
+import Avatar from "../images/avatar/avatar.png";
+import Discovery from "../images/avatar/discovery.png";
+import Hill from "../images/avatar/hill.png";
+import Paragon from "../images/avatar/paragon.png";
+import ReadToMe from "../images/avatar/readtome.png";
+
 const inputFieldRows = [
   {
     label: "What's your full name?",
@@ -42,32 +48,32 @@ const sideNavBottomItems = [
 ];
 const sideNavMiddleItems = [
   {
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     name: "Patrica M.",
     role: "Teacher",
   },
   {
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     name: "Liu Yangdong",
     role: "Principal",
   },
   {
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     name: "Paul Literi",
     role: "Counselor",
   },
   {
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     name: "Chen Ying",
     role: "Counselor",
   },
   {
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     name: "Justin S.",
     role: "Teacher",
   },
   {
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     name: "Chris J.",
     role: "Teacher",
   },
@@ -99,7 +105,7 @@ const cardItemImpact = [
     iconName:"Student",
     ToolIcon: BuildRoundedIcon,
     toolText:"3 tools",
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     className:"btn-rounded danger",
     text: "29 Sept - 10 Nov"
   },{
@@ -109,7 +115,7 @@ const cardItemImpact = [
     iconName:"Student",
     ToolIcon: BuildRoundedIcon,
     toolText:"0 tools",
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     className: "btn-rounded warning",
     text: "20 Oct - 10 Nov"
   }
@@ -122,7 +128,7 @@ const cardItemTool = [
     iconName:"Fall 2020",
     ToolIcon: DoneRoundedIcon,
     toolText:"Student Pod",
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     className: "btn-rounded success",
     text: "$50K/year"
   }, {
@@ -132,7 +138,7 @@ const cardItemTool = [
     iconName:"Fall 2020",
     ToolIcon: ClearRoundedIcon,
     toolText:"Student Pod",
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     className: "btn-rounded info",
     text: "$50K/year"
   },{
@@ -142,26 +148,26 @@ const cardItemTool = [
     iconName:"Fall 2020",
     ToolIcon: ClearRoundedIcon,
     toolText:"Student Pod",
-    img: "../../../public/image/avatar.png",
+    img: Avatar,
     className: "btn-rounded warning",
     text: "$50K/year"
   },
 ]
 const cardItemLearn = [
   {
-    img: "../../../public/image/hill.png",
+    img: Hill,
     title: "ClassCraft",
     description:"writing composition"
   },{
-    img: "../../../public/image/paragon.png",
+    img: Paragon,
     title: "Paragon One",
     description:"Creative Thinking"
   },{
-    img: "../../../public/image/readtome.png",
+    img: ReadToMe,
     title: "ReadToMe",
     description:"Creative Thinking"
   },{
-    img: "../../../public/image/discovery.png",
+    img: Discovery,
     title: "Discovery Education",
     description:"Creative Thinking"
   },
