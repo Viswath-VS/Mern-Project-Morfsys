@@ -5,7 +5,7 @@
   background-color: $background-tertiary;
   grid-column: span 1;
   display: grid;
-  grid: 6rem 12rem 45rem 7rem/ 1fr;
+  grid: 6rem 12rem 45rem 9rem/ 1fr;
   height: 100%;
   max-width: 20rem;
 
@@ -68,6 +68,8 @@
     grid: repeat(10, 1fr) / 1fr;
     height: 100%;
     align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid grey;
 
     img {
       height: 35px;
@@ -109,7 +111,7 @@
       .side-nav-role-detail {
         grid-column: span 1;
         display: grid;
-        grid: 1fr 1fr / 1fe;
+        grid: 1fr 1fr / 1fr;
         align-items: center;
 
         h3 {
@@ -129,14 +131,18 @@
     grid-row: span 1;
     display: grid;
     grid: 1fr 1fr / 1fr;
+    margin-top: 1rem;
+    border-top: 1px solid grey;
 
     .side-nav-bottom-options {
       display: grid;
       grid: auto / 1fr 3fr;
       align-items: center;
       padding: 0.5rem;
+      margin: 0.5rem 0 0;
       color: #818181;
       cursor: pointer;
+      height: 70%;
 
       &:hover {
         background-color: #323c61;

@@ -10,7 +10,7 @@
     grid-column: span 1;
     height: 100%;
     display: grid;
-    grid: 5rem 60rem / 1fr;
+    grid: 5rem 65rem / 1fr;
 
     .body-content-wrapper {
       grid-row: span 1;
@@ -63,9 +63,15 @@
           background-color: $background-primary;
           align-items: center;
           margin-bottom: 1rem;
-          img{
-              width: 35px;
-              height: 35px;
+
+          &:hover {
+            box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.24);
+            cursor: pointer;
+          }
+          
+          img {
+            width: 35px;
+            height: 35px;
           }
           .card-item-learn-details {
             margin-left: 1rem;
@@ -74,13 +80,13 @@
             align-items: center;
             color: #818181;
             cursor: pointer;
-            h3{
-                font-size: $font-size-master;
-                color: $font-color-secondary;  
+            h3 {
+              font-size: $font-size-master;
+              color: $font-color-secondary;
             }
-            p{
-                font-size: $font-size-primary;
-                color: $font-color-tertiary;
+            p {
+              font-size: $font-size-primary;
+              color: $font-color-tertiary;
             }
           }
         }

@@ -22,10 +22,15 @@
         align-items: center;
         // justify-items: center;
         margin-left: 5rem;
+        .section-active{
+            color: $background-tertiary;
+        }
 
         h3{
             grid-column: span 1;
             font-size: $font-size-master;
+            color:$font-color-secondary;
+            font-weight: 600;
             
         }
     }
