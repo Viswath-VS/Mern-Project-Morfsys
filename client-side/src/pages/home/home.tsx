@@ -10,11 +10,11 @@ import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import MoreHorizRoundedIcon from "@material-ui/icons/MoreHorizRounded";
 import "./home.scss";
 import Card from "components/card/card";
-interface Props {}
-const Home = ({}: Props): ReactElement => {
+import {homeProps} from "../../types/proptype";
+const Home = ({auth}: homeProps): ReactElement => {
   return (
     <div className="home-wrapper">
-      <SideNav />
+      <SideNav auth={auth} />
       <div className="home-body-wrapper">
         <Navbar />
         <div className="body-content-wrapper">

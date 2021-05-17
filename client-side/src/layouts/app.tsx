@@ -3,7 +3,7 @@ import Login from "../pages/login/login";
 import Home from "../pages/home/home";
 import axios from "axios";
 import { Switch, Route,Redirect } from "react-router-dom";
-// import auth from "../route/auth";
+import {ROUTES} from "../route/routes";;
 
 const App = (): ReactElement => {
 
@@ -27,8 +27,8 @@ const App = (): ReactElement => {
   return (
     <div className="app-wrapper">
       <Switch>
-        <Route path="/login">{!isAuthenticated ? <Login auth={auth} /> : <Redirect to="/" />}</Route>
-        <Route>{isAuthenticated ? <Home /> : <Redirect to="/login" />}</Route>
+        <Route path={[ROUTES.LOGIN]}>{!isAuthenticated ? <Login auth={auth} /> : <Redirect to={ROUTES.HOME} />}</Route>
+        <Route>{isAuthenticated ? <Home auth={auth} /> : <Redirect to={ROUTES.LOGIN} />}</Route>
       </Switch>
     </div>
   );

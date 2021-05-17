@@ -30,5 +30,10 @@ interface loginProps {
   interface navBarProps {
     
 }
-interface sideNavProps{}
-  export {loginProps, buttonProps, cardProps, inputFieldProps, navBarProps, sideNavProps}
+interface homeProps {
+  auth: any
+}
+interface sideNavProps{
+  auth: any
+}
+  export {loginProps, buttonProps, cardProps, inputFieldProps, navBarProps, sideNavProps, homeProps}

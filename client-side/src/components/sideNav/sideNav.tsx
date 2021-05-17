@@ -11,10 +11,11 @@ import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
 import { useHistory } from "react-router-dom";
 import {sideNavProps} from "../../types/proptype";
 
-const SideNav = ({}: sideNavProps) => {
+const SideNav = ({auth}: sideNavProps) => {
   const history = useHistory();
   const handleLogout = ()=>{
-    return history.push("/");
+    auth();
+    history.push("/login");
   }
  
   return (
