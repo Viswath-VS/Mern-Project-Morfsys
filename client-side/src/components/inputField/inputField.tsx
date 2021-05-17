@@ -1,14 +1,9 @@
 import React, { ReactElement, useState } from "react";
 import Button from "../buttons/button";
 import "./inputField.scss";
-type Props = {
-  // label: string;
-  // name: string;
-  // placeholder: string;
-  // type: string;
-  Login: any
-};
-const InputField = ({Login}: Props): any => {
+import {inputFieldProps} from "../../types/proptype";
+
+const InputField = ({Login}: inputFieldProps): any => {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
   const submitHandler = (e:any) => {
     e.preventDefault();

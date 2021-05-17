@@ -1,10 +1,9 @@
 import React from 'react';
 import "./navbar.scss";
-interface Props {
-    
-}
+import {navBarProps} from "../../types/proptype";
 
- const Navbar = (props: Props) => {
+
+ const Navbar = ({}: navBarProps) => {
     return (
         <div className="home-navbar-container">
            <h1>Shenzhen Houde Academy</h1> 

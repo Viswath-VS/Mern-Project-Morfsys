@@ -1,18 +1,7 @@
 import React from "react";
 import "./card.scss";
 import Button from "../buttons/button";
-interface Props {
-  title: string;
-  buttonName: string;
-  Icon: any;
-  iconName: string;
-  ToolIcon: any;
-  toolText: string;
-  img: string;
-  className: string;
-  text: string;
-  key: any;
-}
+import {cardProps} from "../../types/proptype";
 
 const Card = ({
   title,
@@ -25,7 +14,7 @@ const Card = ({
   className,
   text,
   key,
-}: Props) => {
+}: cardProps) => {
   return (
     <div key={key} className="card-item-impact">
       <h3 className="card-item-title">{title}</h3>

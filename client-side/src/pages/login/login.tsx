@@ -7,12 +7,10 @@ import LoginPrimary from "../../images/loginPrimary.svg";
 import LoginSecondary from "../../images/loginSecondary.svg";
 import "./login.scss";
 import axios from "axios";
+import {loginProps} from "../../types/proptype";
 
-interface Props {
-  auth: any
-}
 
-const Login = ({auth}: Props): ReactElement => {
+const Login = ({auth}: loginProps): ReactElement => {
   let history = useHistory();
   const Login = async (details:object) =>{
     try {

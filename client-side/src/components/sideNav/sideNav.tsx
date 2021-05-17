@@ -9,9 +9,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Logo from "../../images/logo.svg";
 import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
 import { useHistory } from "react-router-dom";
+import {sideNavProps} from "../../types/proptype";
 
-
-const SideNav = () => {
+const SideNav = ({}: sideNavProps) => {
   const history = useHistory();
   const handleLogout = ()=>{
     return history.push("/");
