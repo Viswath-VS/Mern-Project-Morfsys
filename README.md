@@ -1,4 +1,4 @@
-Mern Stack Application build with typescript-webpack. JWT is used for user authentication. Customize as per your needs.
+**Mern Stack Application build with typescript-webpack. JWT is used for user authentication. Customize as per your needs.**
 
 INSTALLATION:-
 
